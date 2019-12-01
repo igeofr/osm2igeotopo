@@ -85,7 +85,7 @@ Nous allons essayer de proposer une mise à jour chaque six mois.
 1.3. Télécharger la région [OSM2IGEO](https://cloud.data-wax.com) qui vous intéresse au format SHP et la placer dans le dossier : **00_IN**
 
     cd "/OSM2IGEOTOPO/"
-    curl --limit-rate 100K LIEN_A_COMPLETER > "01_IN/*.*"
+    curl -J -O --limit-rate 100K "LIEN_A_COMPLETER"
 
 ##### 2. Préparation des données
 *Le script OSM2IGEOTOPO25.sh exploite la puissance de gdal et d'ogr2ogr pour traiter l'information.*
