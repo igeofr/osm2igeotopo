@@ -42,6 +42,7 @@ A plus long terme, nous aimerions générer des cartes topographiques sur l'Afri
 ## Les points faibles
 
   * Hétérogénéité spatiale & attributaire (Hétérogénéités des sources et des compétences des contributeurs).
+  * Rendu à améliorer sur certains points.
 
 ## Formats
 
