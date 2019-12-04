@@ -116,7 +116,7 @@ Source : https://gis.stackexchange.com/questions/116697/one-label-for-two-lane-r
   - 3.3. La symbologie a été adapté du projet de Romain Lacroix : [Carte Topo avec QGIS](https://github.com/rxlacroix/CarteTopo)  
 
 ##### 4. Export automatisé
-L'export est automatisé par un script python qui s'appuye sur l'API de QGIS et qui se base sur le projet suivant : [Standalone Export Atlas QGIS3](https://github.com/carey136/Standalone-Export-Atlas-QGIS3) - Nota : Ne fonctionne pas avec la rerojection à la volée.
+L'export est automatisé par un script python qui s'appuye sur l'API de QGIS et qui se base sur le projet suivant : [Standalone Export Atlas QGIS3](https://github.com/carey136/Standalone-Export-Atlas-QGIS3) - Nota : Ne fonctionne pas avec la rerojection à la volée notamment pour le DSM mais on est sur le coup.
 
 ## Pistes d'évolution
 * Compléter nos travaux OSM2IGEO pour compléter le rendu (bornes géodésiques, points de vue, surfaces en eau, chemin de randonnée GR,...)
