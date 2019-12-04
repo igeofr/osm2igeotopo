@@ -75,12 +75,12 @@ Nous allons essayer de proposer une mise à jour chaque six mois.
 1.1. Créer un raster virtuel regroupant les différentes tuiles EU-DEM :
 
     cd "/OSM2IGEOTOPO/"
-    gdalbuildvrt -resolution highest -a_srs EPSG:2154 -r cubic 01_DSM/1_VRT.vrt  0_SOURCES/*.tif
+    gdalbuildvrt dsm/1_VRT.vrt  dsm/*.tif
 
 1.2. Télécharger les zones maritimes depuis le site : [https://osmdata.openstreetmap.de](https://osmdata.openstreetmap.de)
 
     cd "/OSM2IGEOTOPO/"
-    curl --limit-rate 100K https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip > "02_WATER/WATER_4326.*"
+    curl --limit-rate 100K https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip > "oceans_seas/water-polygons-split-4326.*"
 
 1.3. Télécharger la région [OSM2IGEO](https://cloud.data-wax.com) qui vous intéresse au format SHP et la placer dans le dossier : **00_IN**
 
@@ -144,3 +144,5 @@ Pour toute question concernant le projet ou le jeu de données, vous pouvez me c
 ## Pour aller plus loin :
 * [Carte Topo avec QGIS](https://github.com/rxlacroix/CarteTopo)  
 * [Des cartes topographiques avec OpenStreetMap](https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html)
+* [OpenTopoMap](https://opentopomap.org)
+* [Réaliser un fond de carte en relief](http://bota-phytoso-flo.blogspot.com/2015/08/realiser-un-fond-de-carte-en-relief.html)

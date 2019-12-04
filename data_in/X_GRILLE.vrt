@@ -1,0 +1,8 @@
+<OGRVRTDataSource>
+    <OGRVRTlayer name="COMMUNE">
+        <SrcDataSource>./data_in/osm2igeo/H_OSM_ADMINISTRATIF/COMMUNE.shp</SrcDataSource>
+    </OGRVRTlayer>
+    <OGRVRTlayer name="grille_FRANCE">
+        <SrcDataSource>./data_in/grid/grille_FRANCE.shp</SrcDataSource>
+    </OGRVRTlayer>
+</OGRVRTDataSource>
