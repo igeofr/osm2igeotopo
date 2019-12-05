@@ -64,18 +64,19 @@ Nous allons essayer de proposer une mise à jour chaque six mois.
 
 #### Pré-requis
 
-0. Préalable : Télécharger le modèle numérique de terrain EU-DEM (V1.1) disponible via le site internet de [Copernicus](https://land.copernicus.eu/imagery-in-situ/eu-dem/eu-dem-v1.1) - Nota : inscription obligatoire.
-    * Pour la France métropolitaine télécharger les tuiles : E30N20 (principale), E30N30, E40N20  (un fichier pouvant peser jusqu'à 5Go)  - Système de projection européen ETRS89 (EPSG:3035).
-1. Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.google.com/get/noto/) - *Proposée par Romain Lacroix dans son tuto : [Carte Topo avec QGIS](https://github.com/rxlacroix/CarteTopo)*
+Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.google.com/get/noto/) - *Proposée par Romain Lacroix dans son tuto : [Carte Topo avec QGIS](https://github.com/rxlacroix/CarteTopo)*
 
 
-#### Etapes de création de la données
+#### Etapes : Des données à la carte
 
 ##### 1. Téléchargement des données
-1.1. Créer un raster virtuel regroupant les différentes tuiles EU-DEM :
+1.1.  Télécharger le modèle numérique de terrain EU-DEM (V1.1) disponible via le site internet de [Copernicus](https://land.copernicus.eu/imagery-in-situ/eu-dem/eu-dem-v1.1) - Nota : inscription obligatoire.
+    * Pour la France métropolitaine télécharger les tuiles : E30N20 (principale), E30N30, E40N20  (un fichier pouvant peser jusqu'à 5Go)  - Système de projection européen ETRS89 (EPSG:3035).
 
-    cd "/OSM2IGEOTOPO/"
-    gdalbuildvrt dsm/1_VRT.vrt  dsm/*.tif
+* Créer un raster virtuel regroupant les différentes tuiles EU-DEM :
+
+      cd "/OSM2IGEOTOPO/"
+      gdalbuildvrt dsm/1_VRT.vrt  dsm/*.tif
 
 1.2. Télécharger les zones maritimes depuis le site : [https://osmdata.openstreetmap.de](https://osmdata.openstreetmap.de)
 
