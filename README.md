@@ -125,6 +125,7 @@ L'export est automatisé par un script python qui s'appuye sur l'API de QGIS et 
 * Affiner certaines requêtes
 * Améliorer le rendu du projet QGIS (couleurs, labels, orientation des symboles ...)
 * Améliorer la  recette pour le rendu du modèle numérique et le calcul des courbes de niveau ([Des cartes topographiques avec OpenStreetMap](https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html))
+* Ajouter des courbes de niveau en zone maritime : [GEBCO_2019 grid](https://www.gebco.net/data_and_products/gridded_bathymetry_data/#a1)
 
 ## Licence
 Les données sont fournies sous licence ODbL (Open Database Licence). Cette licence implique : l'attribution et le partage à l'identique.
@@ -144,5 +145,9 @@ Pour toute question concernant le projet ou le jeu de données, vous pouvez me c
 ## Pour aller plus loin :
 * [Carte Topo avec QGIS](https://github.com/rxlacroix/CarteTopo)  
 * [Des cartes topographiques avec OpenStreetMap](https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html)
+* [De belles courbes de niveau](https://www.champs-libres.coop/blog/post/2019-11-21-beautiful-contour-belgium/)
 * [OpenTopoMap](https://opentopomap.org)
 * [Réaliser un fond de carte en relief](http://bota-phytoso-flo.blogspot.com/2015/08/realiser-un-fond-de-carte-en-relief.html)
+* [Comment lire une carte topographique - Partie1](https://blog.twonav.fr/tutoriels-land/lire-carte-topographique-2eme-partie/)
+* [Comment lire une carte topographique - Partie2](https://blog.twonav.fr/uncategorized/comment-lire-carte-topographique/)
+* [RandoCarto](http://randocarto.fr)
