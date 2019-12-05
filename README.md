@@ -67,7 +67,7 @@ Nous allons essayer de proposer une mise à jour chaque six mois.
 Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.google.com/get/noto/) - *Proposée par Romain Lacroix dans son tuto : [Carte Topo avec QGIS](https://github.com/rxlacroix/CarteTopo)*
 
 
-#### Etapes : Des données à la carte
+#### Des données à la carte - Etapes
 
 ##### 1. Téléchargement des données
 1.1.  Télécharger le modèle numérique de terrain EU-DEM (V1.1) disponible via le site internet de [Copernicus](https://land.copernicus.eu/imagery-in-situ/eu-dem/eu-dem-v1.1) - Nota : inscription obligatoire.
