@@ -71,17 +71,18 @@ Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.g
 
 ##### 1. Téléchargement des données
 1.1.  Télécharger le modèle numérique de terrain EU-DEM (V1.1) disponible via le site internet de [Copernicus](https://land.copernicus.eu/imagery-in-situ/eu-dem/eu-dem-v1.1) - Nota : inscription obligatoire.
-    * Pour la France métropolitaine télécharger les tuiles : E30N20 (principale), E30N30, E40N20  (un fichier pouvant peser jusqu'à 5Go)  - Système de projection européen ETRS89 (EPSG:3035).
+
+* Pour la France métropolitaine télécharger les tuiles : E30N20 (principale), E30N30, E40N20  (un fichier pouvant peser jusqu'à 5Go)  - Système de projection européen ETRS89 (EPSG:3035).
 
 * Créer un raster virtuel regroupant les différentes tuiles EU-DEM :
 
       cd "/OSM2IGEOTOPO/"
-      gdalbuildvrt dsm/1_VRT.vrt  dsm/*.tif
+      gdalbuildvrt data_in/dsm/1_VRT.vrt  data_in/dsm/*.tif
 
 1.2. Télécharger les zones maritimes depuis le site : [https://osmdata.openstreetmap.de](https://osmdata.openstreetmap.de)
 
     cd "/OSM2IGEOTOPO/"
-    curl --limit-rate 100K https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip > "oceans_seas/water-polygons-split-4326.*"
+    curl --limit-rate 100K https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip > "data_in/oceans_seas/water-polygons-split-4326.*"
 
 1.3. Télécharger la région [OSM2IGEO](https://cloud.data-wax.com) qui vous intéresse au format SHP et la placer dans le dossier : **00_IN**
 
