@@ -37,7 +37,7 @@ print('is readable: ' + str(bool(st.st_mode & stat.S_IRGRP)))
 #### Or use flags to override defaults ####
 
 # -P = Project file
-myProject = '/Users/florianboret/Desktop/OSM2IGEOTOPO/06_PROJET/X_PROJET_OSM2IGEOTOPO_V1.qgs'
+myProject = '/osm2igeotopo/X_PROJET_OSM2IGEOTOPO_V1.qgs'
 
 # -L = Layout ("Layout name")
 layoutName = 'EXPORT_DALLE'
@@ -52,7 +52,7 @@ coverageLayer = 'Grille'
 outputFormat = 'image'
 
 # -D = Output Directory ("c:your\output" - exclude trailing "\")
-outputFolder = '/Users/florianboret/Desktop/OSM2IGEOTOPO/07_EXPORT/'
+outputFolder = '/osm2igeotopo/OSM2IGEOTOPO/07_EXPORT/'
 
 # -N = Image output Query
 outputName = "format_date(now(),'yyyy_MM_dd') || '_OSM2IGEOTOPO_' || if(to_int( (x_min(@atlas_geometry )))<1000000,'0' ||left(x_min(@atlas_geometry ),3),left(x_min(@atlas_geometry ),4))  || '_'  || if(to_int( (y_max(@atlas_geometry )))<1000000,'0' ||left(y_max(@atlas_geometry ),3),left(y_max(@atlas_geometry ),4)) || '_L93'" #e.g.\"Parish\" || \' \' || \"Number\" where parish and number are columns
