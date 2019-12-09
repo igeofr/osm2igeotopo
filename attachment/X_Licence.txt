@@ -1,7 +1,7 @@
 ********************************************
 Les données que vous venez de télécharger sont fournies sous licence ODbL (Open Database Licence). Cette licence implique : l'attribution et le partage à l'identique.
-	•	Pour la mention d'attribution veuillez indiquer « osm2igeotopo par DATA\WAX - © les contributeurs d’OpenStreetMap ».
-	•	Pour le partage à l'identique, toute amélioration des données de osm2igeo doit être repartagée sous licence identique.
+	•	Pour la mention d'attribution veuillez indiquer « osm2igeotopo par DATA\WAX - © les contributeurs d’OpenStreetMap - Copernicus programme, European Digital Elevation Model (EU-DEM), version 1.1 Copernicus programme  avec un financement de l'Union européenne».
+	•	Pour le partage à l'identique, toute amélioration des données de osm2igeotopo doit être repartagée sous licence identique.
 
 Merci de nous faire remonter : les erreurs ou les problèmes que vous rencontrez.
 
