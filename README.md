@@ -1,6 +1,6 @@
 # **osm2igeotopo**
 
-**[Télécharger les données générées sur la France métropolitaine, les DOM-TOM](https://cloud.data-wax.com/)** ([Découpage suivant les anciennes régions](https://fr.wikipedia.org/wiki/Région_française)).
+**[Télécharger les données générées sur la France métropolitaine, les DOM-TOM](https://cloud.data-wax.com/index.php/s/J78Q5CQTrLwzmwL)** ([Découpage suivant les anciennes régions](https://fr.wikipedia.org/wiki/Région_française)).
 
 ---
 ## Objectif du projet
@@ -18,7 +18,7 @@ En m'appuyant sur les données générées pour [OSM2IGEO](https://github.com/ig
 
 
 ## Les données générées
-**[Télécharger les données générées sur la France métropolitaine, les DOM-TOM](https://cloud.data-wax.com/)** ([Découpage suivant les anciennes régions](https://fr.wikipedia.org/wiki/Région_française)).
+**[Télécharger les données générées sur la France métropolitaine, les DOM-TOM](https://cloud.data-wax.com/index.php/s/J78Q5CQTrLwzmwL)** ([Découpage suivant les anciennes régions](https://fr.wikipedia.org/wiki/Région_française)).
 A plus long terme, nous aimerions générer des cartes topographiques sur l'Afrique Francophone ou ce type de carte est difficilement accessible.
 
 **Attention :** Les fichiers générés ne respectent pas les spécifications du [SCAN25® | IGN](https://professionnels.ign.fr/scan25) ils visent seulement à s'en rapprocher pour pallier à un besoin de données/informations libres.
