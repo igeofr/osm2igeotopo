@@ -2,14 +2,14 @@
 #OSM2IGEOTOPO - FRANCE
 ##########################
 
-cd /Users/florianboret/Desktop/OSM2IGEOTOPO_V2/data_in/osm2igeo/
+cd /osm2igeo/data_in/osm2igeo/
 for f in *.zip;
   do
     unzip -o ${f%%.*}.zip; #Décompresse le dossier
     yes | cp -rf ${f%%.*}/* ./; #Déplace les fichiers
     rm -r ./${f%%.*}
     rm ${f%%.*}.zip
-    cd /Users/florianboret/Desktop/OSM2IGEOTOPO_V2/
+    cd /osm2igeo/
     echo 'Commune 500m'
     ogr2ogr -f "ESRI Shapefile" data_temp/1_COMMUNE_DISSOLVE.shp data_in/osm2igeo/H_OSM_ADMINISTRATIF/COMMUNE.shp -dialect sqlite -sql "SELECT (st_buffer(ST_Union(geometry),500)) FROM COMMUNE"
     echo 'Clip DSM'
