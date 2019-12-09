@@ -132,8 +132,8 @@ L'export est automatisé par un script python qui s'appuye sur l'API de QGIS et 
 ## Licence
 Les données sont fournies sous licence ODbL (Open Database Licence). Cette licence implique : l'attribution et le partage à l'identique.
 
-*	Pour la mention d'attribution veuillez indiquer « osm2igeotopo par DATA\WAX - © les contributeurs d’OpenStreetMap ».
-*	Pour le partage à l'identique, toute amélioration des données de osm2igeo doit être repartagée sous licence identique.
+*	Pour la mention d'attribution veuillez indiquer « osm2igeotopo par DATA\WAX - © les contributeurs d’OpenStreetMap - Copernicus programme, European Digital Elevation Model (EU-DEM), version 1.1, financement de l'Union européenne ».
+*	Pour le partage à l'identique, toute amélioration des données de osm2igeotopo doit être repartagée sous licence identique.
 
 ## Merci
 Nous remercions tous les contributeurs du  projet OpenStreetMap qui enrichissent quotidiennement cette base de données géographique mondiale.
