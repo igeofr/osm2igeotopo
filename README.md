@@ -1,6 +1,6 @@
 # **osm2igeotopo**
 
-**[Télécharger les données générées sur la France métropolitaine, les DOM-TOM](https://data.data-wax.com/OSM2IGEOTOPO25/FRANCE/)** ([Découpage suivant les anciennes régions](https://fr.wikipedia.org/wiki/Région_française)).
+**[Télécharger les données générées sur la France métropolitaine, les DOM-TOM](https://data.data-wax.com/?dir=OSM2IGEOTOPO25/FRANCE/)** ([Découpage suivant les anciennes régions](https://fr.wikipedia.org/wiki/Région_française)).
 
 ---
 ## Objectif du projet
@@ -18,7 +18,7 @@ En m'appuyant sur les données générées pour [OSM2IGEO](https://github.com/ig
 
 
 ## Les données générées
-**[Télécharger les données générées sur la France métropolitaine, les DOM-TOM](https://data.data-wax.com/OSM2IGEOTOPO25/)** ([Découpage suivant les anciennes régions](https://fr.wikipedia.org/wiki/Région_française)).
+**[Télécharger les données générées sur la France métropolitaine, les DOM-TOM](https://data.data-wax.com/?dir=OSM2IGEOTOPO25/)** ([Découpage suivant les anciennes régions](https://fr.wikipedia.org/wiki/Région_française)).
 A plus long terme, nous aimerions générer des cartes topographiques sur l'Afrique Francophone ou ce type de carte est difficilement accessible.
 
 **Attention :** Les fichiers générés ne respectent pas les spécifications du [SCAN25® | IGN](https://professionnels.ign.fr/scan25) ils visent seulement à s'en rapprocher pour pallier à un besoin de données/informations libres.
@@ -84,7 +84,6 @@ Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.g
 
     cd "/OSM2IGEOTOPO/"
     curl --limit-rate 100K https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip > "data_in/oceans_seas/water-polygons-split-4326.*"
-
 
 ##### 2. Des données à la carte : Préparation et traitement des données :
 *Le script OSM2IGEOTOPO25.sh exploite la puissance de gdal et d'ogr2ogr pour traiter l'information.*
