@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis minScale="1e+08" hasScaleBasedVisibilityFlag="0" maxScale="0" version="3.4.13-Madeira" styleCategories="AllStyleCategories">
+<qgis minScale="1e+08" maxScale="0" version="3.12.0-București" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0">
   <flags>
     <Identifiable>1</Identifiable>
     <Removable>1</Removable>
@@ -12,7 +12,7 @@
     <property key="identify/format" value="Value"/>
   </customproperties>
   <pipe>
-    <rasterrenderer opacity="1" alphaBand="4" blueBand="3" type="multibandcolor" greenBand="2" redBand="1">
+    <rasterrenderer opacity="1" alphaBand="4" blueBand="3" nodataColor="" type="multibandcolor" redBand="1" greenBand="2">
       <rasterTransparency/>
       <minMaxOrigin>
         <limits>None</limits>
@@ -24,8 +24,8 @@
       </minMaxOrigin>
     </rasterrenderer>
     <brightnesscontrast brightness="0" contrast="0"/>
-    <huesaturation colorizeStrength="100" colorizeOn="0" colorizeBlue="128" saturation="0" colorizeRed="255" grayscaleMode="0" colorizeGreen="128"/>
-    <rasterresampler maxOversampling="2" zoomedInResampler="cubic" zoomedOutResampler="bilinear"/>
+    <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" colorizeOn="0" grayscaleMode="0" colorizeRed="255" colorizeStrength="100"/>
+    <rasterresampler maxOversampling="2" zoomedInResampler="bilinear" zoomedOutResampler="bilinear"/>
   </pipe>
   <blendMode>0</blendMode>
 </qgis>

@@ -46,25 +46,26 @@ A plus long terme, nous aimerions générer des cartes topographiques sur l'Afri
 
 ## Formats
 
-* jp2000 (prochainement remplacé par un format  plus ouvert : .tif).
+* .tif
 
 *Il est possible d'envisager d'autres formats si le besoin se fait sentir.*
 
 ## Projections disponibles
 
 * Pour la France métropole : (RGF 93) projection Lambert-93 (EPSG : 2154)
-* Pour les DOM-TOM : (Prochainement)
 
 *Il est possible de générer les fichiers dans d'autres systèmes de projection.*
 
 ## Mises à jour
-Nous allons essayer de proposer une mise à jour chaque six mois.
+Nous allons essayer de proposer une mise à jour chaque mois.
 
 ## Pré-requis et étapes de la chaine de traitement osm2igeotopo
 
 #### Pré-requis
 
 Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.google.com/get/noto/) - *Proposée par Romain Lacroix dans son tuto : [Carte Topo avec QGIS](https://github.com/rxlacroix/CarteTopo)*
+
+**A creuser :** [Typography for topography : BELLTOPO SANS TYPEFACE & FREE FONT](https://www.sarahbellmaps.com/typography-for-topography-belltopo-sans-free-font/)
 
 
 #### Des données à la carte - Etapes
@@ -84,15 +85,11 @@ Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.g
     cd "/OSM2IGEOTOPO/"
     curl --limit-rate 100K https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip > "data_in/oceans_seas/water-polygons-split-4326.*"
 
-1.3. Télécharger la région [OSM2IGEO](https://data.data-wax.com/OSM2IGEO/) qui vous intéresse au format SHP et la placer dans le dossier : **00_IN**
 
-    cd "/OSM2IGEOTOPO/"
-    curl -J -O --limit-rate 100K "LIEN_A_COMPLETER"
-
-##### 2. Préparation des données
+##### 2. Des données à la carte : Préparation et traitement des données :
 *Le script OSM2IGEOTOPO25.sh exploite la puissance de gdal et d'ogr2ogr pour traiter l'information.*
 
-  - 2.1. Décompression des données [OSM2IGEO](https://data.data-wax.com/OSM2IGEO/)
+  - 2.1. Téléchargement et décompression des données [OSM2IGEO](https://data.data-wax.com/OSM2IGEO/)
   - 2.2. Création d'une zone tampon de 500m autour des communes de la région concernée
   - 2.3. Découpage du modèle numérique sur la région concernée
   - 2.4. Création des courbes de niveau
@@ -100,6 +97,8 @@ Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.g
   - 2.6. Découpage des courbes de niveau suivant  ce fichier d'emprise régionale
   - 2.7. Sélection des mailles recouvrant la région choisie
   - 2.8. Sélection des zones maritimes bordant la région
+  - 2.9. Création de raster d'ombrage à partir des données EU-DEM
+  - 2.9. Export de la carte sous forme de tuiles : L'export est automatisé par un script python qui s'appuye sur l'API de QGIS (export_atlas.py)
 
 ##### 3. Mise en forme des données
 Pour faciliter la mise en forme des données nous avons travaillé avec le logiciel libre [QGIS3](https://www.qgis.org).
@@ -115,16 +114,22 @@ Pour faciliter la mise en forme des données nous avons travaillé avec le logic
 
 Source : https://gis.stackexchange.com/questions/116697/one-label-for-two-lane-roads-osm-qgis-postgis/322816#322816
 
-  - 3.3. La symbologie a été adapté du projet de Romain Lacroix : [Carte Topo avec QGIS](https://github.com/rxlacroix/CarteTopo)  
+  - 3.3. La mise en forme des labels des courbes de niveau. [A creuser](https://pigrecoinfinito.com/2020/01/31/qgis-come-allineare-le-etichette-delle-isoipse/) - [A creuser avec QGIS3.12](https://twitter.com/underdarkgis/status/1235641033381171200) - [A creuser avec QGIS3.12](https://twitter.com/klaskarlsson/status/1247145131234525184)
+  - 3.4. La symbologie a été adapté du projet de Romain Lacroix : [Carte Topo avec QGIS](https://github.com/rxlacroix/CarteTopo)
+  - ~~3.5. Améliorer le rendu du MNT : [Corriger l'effet de grille](https://mobile.twitter.com/antoniolocandro/status/1232349539295748099) - [Le problème] (https://gis.stackexchange.com/questions/271439/hillshade-shows-grid-texture-artifacts)~~
+  - ~~3.6. Effets ade profondeur pour les plans d'eau [Ajouter un effet](https://twitter.com/timlinux/status/1255463780412198912)~~
 
-##### 4. Export automatisé
-L'export est automatisé par un script python qui s'appuye sur l'API de QGIS et qui se base sur le projet suivant : [Standalone Export Atlas QGIS3](https://github.com/carey136/Standalone-Export-Atlas-QGIS3) - Nota : Ne fonctionne pas avec la rerojection à la volée notamment pour le DSM mais on est sur le coup.
+##### 5. Compression des tuiles
+
+###### A suivre :
+* [Benchmarks - Lossless compression algorithms](https://www.gaia-gis.it/fossil/librasterlite2/wiki?name=benchmarks+%282019+update%29)
+* [Guide to GeoTIFF compression and optimization with GDAL](https://kokoalberti.com/articles/geotiff-compression-optimization-guide/)
 
 ## Pistes d'évolution
-* Compléter nos travaux OSM2IGEO pour compléter le rendu (bornes géodésiques, points de vue, surfaces en eau,...)
-* Créer une légende
+* ~~Compléter nos travaux OSM2IGEO pour compléter le rendu (bornes géodésiques, points de vue, surfaces en eau,...)~~
+* Créer une légende [Légende OpenTopoMap](https://opentopomap.org/about)
 * Créer un fichier de métadonnées
-* Affiner certaines requêtes
+* ~~Affiner certaines requêtes~~
 * Améliorer le rendu du projet QGIS (couleurs, labels, orientation des symboles ...)
 * Améliorer la  recette pour le rendu du modèle numérique et le calcul des courbes de niveau ([Des cartes topographiques avec OpenStreetMap](https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html))
 * Ajouter des courbes de niveau en zone maritime : [GEBCO_2019 grid](https://www.gebco.net/data_and_products/gridded_bathymetry_data/#a1)
@@ -148,8 +153,19 @@ Pour toute question concernant le projet ou le jeu de données, vous pouvez me c
 * [Carte Topo avec QGIS](https://github.com/rxlacroix/CarteTopo)  
 * [Des cartes topographiques avec OpenStreetMap](https://blog.champs-libres.coop/carto/2018/12/18/openardennemap.html)
 * [De belles courbes de niveau](https://www.champs-libres.coop/blog/post/2019-11-21-beautiful-contour-belgium/)
+* [OpenArdenneMap – version hiver 2019-2020](http://www.nobohan.be/2020/02/05/openardennemap-livraison-hiver-2019-2020/)
 * [OpenTopoMap](https://opentopomap.org)
 * [Réaliser un fond de carte en relief](http://bota-phytoso-flo.blogspot.com/2015/08/realiser-un-fond-de-carte-en-relief.html)
 * [Comment lire une carte topographique - Partie1](https://blog.twonav.fr/tutoriels-land/lire-carte-topographique-2eme-partie/)
 * [Comment lire une carte topographique - Partie2](https://blog.twonav.fr/uncategorized/comment-lire-carte-topographique/)
 * [RandoCarto](http://randocarto.fr)
+* [A creuser : Rendu DSM / Littoral](https://xycarto.com/blog/)
+
+---
+## Biblio :
+* [How Do Map Readers Recognize a Topographic Mapping Style?](https://www.researchgate.net/publication/284898837_How_Do_Map_Readers_Recognize_a_Topographic_Mapping_Style)
+* [How to design a cartographic continuum to help users to navigate between two topographic styles?](https://www.researchgate.net/publication/318466208_How_to_design_a_cartographic_continuum_to_help_users_to_navigate_between_two_topographic_styles)
+---
+## Sur le sujet :
+* [Alternative au Scan25 & rendus OSM](https://georezo.net/forum/viewtopic.php?id=105965)
+* [Equivalent IGN et Geoportail en Côte d'Ivoire](https://georezo.net/forum/viewtopic.php?pid=328198)
