@@ -164,6 +164,7 @@ Pour toute question concernant le projet ou le jeu de données, vous pouvez me c
 ## Biblio :
 * [How Do Map Readers Recognize a Topographic Mapping Style?](https://www.researchgate.net/publication/284898837_How_Do_Map_Readers_Recognize_a_Topographic_Mapping_Style)
 * [How to design a cartographic continuum to help users to navigate between two topographic styles?](https://www.researchgate.net/publication/318466208_How_to_design_a_cartographic_continuum_to_help_users_to_navigate_between_two_topographic_styles)
+
 ---
 ## Sur le sujet :
 * [Alternative au Scan25 & rendus OSM](https://georezo.net/forum/viewtopic.php?id=105965)
