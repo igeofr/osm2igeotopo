@@ -86,8 +86,14 @@ Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.g
     curl --limit-rate 100K https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip > "data_in/oceans_seas/water-polygons-split-4326.*"
 
 ##### 2. Des données à la carte : Préparation et traitement des données :
-*Le script OSM2IGEOTOPO25.sh exploite la puissance de gdal et d'ogr2ogr pour traiter l'information.*
+*Le script 2_osm2igeotopo25.sh exploite la puissance de gdal et d'ogr2ogr pour traiter l'information.*
 
+**Exécuter cette commande pour lancer la production des tuiles.**
+
+    cd "/OSM2IGEOTOPO/"
+    2_osm2igeotopo25.sh 11_ILE_DE_FRANCE
+
+**Etapes du script**
   - 2.1. Téléchargement et décompression des données [OSM2IGEO](https://data.data-wax.com/OSM2IGEO/)
   - 2.2. Création d'une zone tampon de 500m autour des communes de la région concernée
   - 2.3. Découpage du modèle numérique sur la région concernée
@@ -98,6 +104,10 @@ Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.g
   - 2.8. Sélection des zones maritimes bordant la région
   - 2.9. Création de raster d'ombrage à partir des données EU-DEM
   - 2.9. Export de la carte sous forme de tuiles : L'export est automatisé par un script python qui s'appuye sur l'API de QGIS (export_atlas.py)
+
+**Attention :**
+  - il faut modifier les chemins en fonction de votre organisation (home/...)
+  - il faut modifier la fin du script si vous souhaitez exporter ou non le résultat sur un serveur FTP (Curl).
 
 ##### 3. Mise en forme des données
 Pour faciliter la mise en forme des données nous avons travaillé avec le logiciel libre [QGIS3](https://www.qgis.org).
