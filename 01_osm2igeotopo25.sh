@@ -66,7 +66,7 @@ for f in *.zip;
     ogr2ogr data_temp/6_GRILLE_SELECT.shp data_in/X_GRILLE.vrt -dialect sqlite -sql "SELECT b.id, b.geometry FROM grille_FRANCE b WHERE st_intersects( (SELECT (st_union(geometry)) FROM COMMUNE), b.geometry)"
     echo 'Mer'
     ogr2ogr -t_srs "EPSG:2154" data_temp/7_WATER_SELECT.shp data_in/X_WATER.vrt -dialect sqlite -sql "SELECT st_union(b.geometry) FROM water_polygons b WHERE st_intersects((SELECT st_transform(st_buffer(st_union(geometry),500),4326) FROM COMMUNE), b.geometry)"
-    echo 'ombrage'
+    echo 'Ombrage'
     gdaldem hillshade data_temp/2_IMAGE_CLIP.tif data_temp/8_OMBRAGE_225.tif -of GTiff -b 1 -z 1.5 -s 1.0 -az 225.0 -alt 45.0
     gdaldem hillshade data_temp/2_IMAGE_CLIP.tif data_temp/8_OMBRAGE_360.tif -of GTiff -b 1 -z 1.5 -s 1.0 -az 360.0 -alt 45.0
     gdaldem hillshade data_temp/2_IMAGE_CLIP.tif data_temp/8_OMBRAGE_315.tif -of GTiff -b 1 -z 1.5 -s 1.0 -az 315.0 -alt 45.0
@@ -101,13 +101,16 @@ for f in *.zip;
     zip -r $DATE_T'_'${NAME_FOLDER}.zip $DATE_T'_'${NAME_FOLDER};
     rm -r $DATE_T'_'${NAME_FOLDER};
 
+    ##Permet d'exporter les données sur un serveur FTP
     curl -s -T $DATE_T'_'${NAME_FOLDER}.zip ftp://ftp-xxxxxxx/FRANCE/ --user "IDENTIFIANT:PASSWORD"
     curl -s -u "IDENTIFIANT:PASSWORD" "ftp://ftp-xxxxxxx/FRANCE/" -Q "-DELE $DATE_OLD'_'${NAME_FOLDER}.zip"
 
+    ##Permet de supprimer le fichier zip généré après l'envoi sur un serveur FTP
     rm -r $DATE_T'_'${NAME_FOLDER}.zip
 
     cd /home/osm2igeotopo/
     #rm -r data_temp/*
+    ##Permet de supprimer les données OSM2IGEOTOPO en entrée
     rm -rfv data_in/osm2igeo/*
 
 done
