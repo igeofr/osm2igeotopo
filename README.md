@@ -113,6 +113,11 @@ Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.g
 Pour faciliter la mise en forme des données nous avons travaillé avec le logiciel libre [QGIS3](https://www.qgis.org).
 
   - 3.1. La mise en forme des labels se base sur [notre script de mise en forme des toponymes suivant les règles de l'IGN](https://github.com/igeofr/qgis2/blob/master/expressions/mise_en_forme_des_toponymes_V2_beta.txt)
+
+###### Pour aller plus loin :
+> [Commission de toponymie du Québec - Toponyme et abbréviation](http://www.toponymie.gouv.qc.ca/ct/normes-procedures/terminologie-geographique/liste-termes-geographiques.aspx)
+
+
   - 3.2. L'orientation des labels est réalisée à l'aide du code :
 
         CASE
