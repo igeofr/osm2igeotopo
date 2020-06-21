@@ -145,7 +145,6 @@ Source : https://gis.stackexchange.com/questions/116697/one-label-for-two-lane-r
 
 ___
 
-
 ## Pistes d'évolution
 * ~~Compléter nos travaux OSM2IGEO pour compléter le rendu (bornes géodésiques, points de vue, surfaces en eau,...)~~
 * Créer une légende [Légende OpenTopoMap](https://opentopomap.org/about)
