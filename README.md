@@ -85,6 +85,8 @@ Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.g
     cd "/OSM2IGEOTOPO/"
     curl --limit-rate 100K https://osmdata.openstreetmap.de/download/water-polygons-split-4326.zip > "data_in/oceans_seas/water-polygons-split-4326.*"
 
+___
+
 ##### 2. Des données à la carte : Préparation et traitement des données :
 *Le script 2_osm2igeotopo25.sh exploite la puissance de gdal et d'ogr2ogr pour traiter l'information.*
 
@@ -108,6 +110,8 @@ Télécharger la police d'écriture  [Noto Sans Display Condensed](https://www.g
 **Attention :**
   - il faut modifier les chemins en fonction de votre organisation (home/...)
   - il faut modifier la fin du script si vous souhaitez exporter ou non le résultat sur un serveur FTP (Curl).
+
+___
 
 ##### 3. Mise en forme des données
 Pour faciliter la mise en forme des données nous avons travaillé avec le logiciel libre [QGIS3](https://www.qgis.org).
@@ -138,6 +142,9 @@ Source : https://gis.stackexchange.com/questions/116697/one-label-for-two-lane-r
 ###### A suivre :
 * [Benchmarks - Lossless compression algorithms](https://www.gaia-gis.it/fossil/librasterlite2/wiki?name=benchmarks+%282019+update%29)
 * [Guide to GeoTIFF compression and optimization with GDAL](https://kokoalberti.com/articles/geotiff-compression-optimization-guide/)
+
+___
+
 
 ## Pistes d'évolution
 * ~~Compléter nos travaux OSM2IGEO pour compléter le rendu (bornes géodésiques, points de vue, surfaces en eau,...)~~
